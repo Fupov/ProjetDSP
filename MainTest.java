@@ -17,12 +17,12 @@ import java.util.Scanner;
 //ainsi qu'a stackoverflow evidemment, comme toujours... !
 
 public class MainTest {
-	public static void main(String[] args) throws ParserConfigurationException, IOException, SAXException {
+	/*public static void main(String[] args) throws ParserConfigurationException, IOException, SAXException {
 		Batiment c = new Batiment();
 		System.out.println(c);
-	}
+	}*/
 
-	/*private static final String FILENAME = "C:\\Users\\ing\\IdeaProjects\\JavaProjet\\src\\data.xml";
+	private static final String FILENAME = "C:\\Users\\ing\\IdeaProjects\\JavaProjet\\src\\data.xml";
 
 	public static void main(String[] args)
 	{
@@ -176,5 +176,5 @@ public class MainTest {
 		{
 			e.printStackTrace();
 		}
-	}*/
+	}
 }

@@ -18,5 +18,10 @@ public  class Batiment extends Composant{
     public Batiment() throws ParserConfigurationException, IOException, SAXException {
         super();
     }
+    public Batiment( String ID,String NAME)
+    {
+        super(ID, NAME);
+    }
+
 
 }
