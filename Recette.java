@@ -1,7 +1,7 @@
 public class Recette extends Composant {
-    private Ressource[] in;
-    private int time;
-    private Usine producer;
+    protected Ressource[] in;
+    protected int time;
+    protected Usine producer;
 
     public Recette()
     {
