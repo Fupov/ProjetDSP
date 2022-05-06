@@ -177,4 +177,41 @@ public class MainTest {
 			e.printStackTrace();
 		}
 	}
+
+	//Methode Exception Au repos, en travail.
+	// add if in to string
+	public void usageState(Batiment batiment) throws UsageException {
+		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+		boolean A=true;
+		try {
+			// parse XML file
+			DocumentBuilder db = dbf.newDocumentBuilder();
+
+			Document doc = db.parse(new File(FILENAME));
+
+
+			//On parcourt tous les composants du fichier
+			NodeList list = doc.getElementsByTagName("items");
+
+			//Pour chaque composant...
+			for (int temp = 0; temp < list.getLength(); temp++) {
+				Node node = list.item(temp);
+
+				if (node.getNodeType() == Node.ELEMENT_NODE) {
+					//On regarde le nom et la categorie du composant
+					Element element = (Element) node;
+					//Quand le tag lu est unique pour l'objet, on peut faire ainsi
+					int usage = Integer.parseInt(element.getElementsByTagName("usage").item(0).getTextContent());
+					String name = element.getElementsByTagName("name").item(0).getTextContent();
+					if (usage == 0) {
+						throw new UsageException("En repos");
+					} else {
+						throw new UsageException("En travail");
+					}
+				}
+			}
+		} catch (ParserConfigurationException | SAXException | IOException e) {
+			e.printStackTrace();
+		}
+	}
 }

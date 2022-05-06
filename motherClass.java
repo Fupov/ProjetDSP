@@ -9,4 +9,6 @@ public interface motherClass {
     ArrayList<Extracteur> extracteur = new ArrayList<Extracteur>();
     ArrayList<ExtracteurNonElectrique>extracteurnonElectrique = new ArrayList<ExtracteurNonElectrique>();
     ArrayList<UsineElectrique>usineelectrique = new ArrayList<UsineElectrique>();
+
+
 }
