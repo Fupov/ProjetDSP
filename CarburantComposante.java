@@ -11,7 +11,7 @@ public class CarburantComposante extends Composant{
     }
     public CarburantComposante (String ID ,String NAME,Boolean F,String categorie,int value)
     {
-        super(ID, NAME);
+        super(ID, NAME,categorie);
         this.categorie=categorie;
         this.fuel=F;
         this.value=value;

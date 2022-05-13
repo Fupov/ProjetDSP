@@ -1,10 +1,15 @@
 public class Composant {
     protected String id;
     protected String name;
+    protected String categorie;
+    public Composant(String ID ,String NAME, String categorie){
+        this.id=ID;
+        this.name=NAME;
+        this.categorie=categorie;
+    }
     public Composant(String ID ,String NAME){
         this.id=ID;
         this.name=NAME;
-
     }
     public Composant()
     {
@@ -13,7 +18,7 @@ public class Composant {
     }
     public String toString()
     {
-        return " "+name;
+        return id+" -- "+name;
     }
     public String getid() {
         return id ;

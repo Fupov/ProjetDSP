@@ -1,37 +1,28 @@
-public class Recette extends Composant {
-    protected Ressource[] in;
-    protected int time;
-    protected Usine producer;
+import java.util.ArrayList;
 
-    public Recette()
+public class Recette{
+    protected String id;
+    protected String name;
+    protected ArrayList<String> in;
+    protected double time;
+    protected String producer;
+    public Recette(String ID,String NAME,double time, ArrayList<String> in,String producer)
     {
-        super();
-        this.time=0;
-        this.producer=new Usine();
-        this.in=new Ressource[1];
-    }
-    public Recette(int n,String ID ,String NAME,int time,float speed,int usage,int drain)
-    {
-
-        super(ID,NAME);
-        int i;
+        this.id=ID;
+        this.name=NAME;
         this.time=time;
-        this.producer=new Usine(speed,usage,drain);
-        this.in=new Ressource[n];
-        for(i=0;i<n;i++)
-        {
-            in[i]=new Ressource();
-        }
+        this.producer=producer;
+        this.in=in;
     }
     public String toString(){
         String A;
         int i;
-        A=super.toString()+" a des resource :";
-        for(i=0;i<in.length;i++)
+        A=id+" "+name+" a des resource :";
+        for(String a :in)
         {
-            A=" "+A+" " +(in[i].toString())+"\n";
+            A=" "+A+" " +a+"\n";
         }
-        A=" product par"+ producer+"necessitate "+time+"s"  ;
+        A=A+" produit par --"+ producer+" -- necessitate "+time+"s"  ;
         return A;
     }
 

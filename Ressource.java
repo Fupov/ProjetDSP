@@ -1,14 +1,18 @@
 public class Ressource extends Composant{
-    private Extracteur minedby;
-    public Ressource()
+    private String minedby;
+    public Ressource(String ID)
     {
-        super();
-        this.minedby=new Extracteur();
+        this.id=ID;
     }
-    public Ressource(String ID,String NAME,int speed)
+    public Ressource(String ID,String NAME,String minedby)
     {
         super(ID, NAME);
-        this.minedby=new Extracteur(speed);
+        this.minedby=minedby;
+    }
+    public Ressource(String ID,String NAME,String category,String minedby)
+    {
+        super(ID, NAME,category);
+        this.minedby=minedby;
     }
     public String toString() {
         return super.toString()+ " mined by " + minedby;

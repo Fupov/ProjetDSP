@@ -1,17 +1,17 @@
-public class CarburantRessource extends Ressource {
+public class CarburantRessource  {
     protected boolean fuel;
     protected String categorie;
     protected int value;
     public CarburantRessource ()
     {
-        super();
+        //super();
         this.categorie="";
         this.fuel=false;
         this.value=0;
     }
-    public CarburantRessource (String ID ,String NAME,int speed ,Boolean F,String categorie,int value)
+    public CarburantRessource (String ID ,String NAME,String category,int speed ,Boolean F,String categorie,int value)
     {
-        super(ID, NAME,speed);
+        //super(ID, NAME,category,speed);
         this.categorie=categorie;
         this.fuel=F;
         this.value=value;

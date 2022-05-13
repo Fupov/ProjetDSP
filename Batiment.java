@@ -18,9 +18,9 @@ public  class Batiment extends Composant{
     public Batiment() throws ParserConfigurationException, IOException, SAXException {
         super();
     }
-    public Batiment( String ID,String NAME)
+    public Batiment( String ID,String NAME, String category)
     {
-        super(ID, NAME);
+        super(ID, NAME,category);
     }
 
 
